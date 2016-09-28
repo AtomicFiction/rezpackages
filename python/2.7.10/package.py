@@ -9,5 +9,4 @@ variants = [
 ]
 
 def commands():
-    env.PATH.append('/home/cmartin/opt/python/python2.7.10/bin')
-    env.LD_LIBRARY_PATH.append('/home/cmartin/opt/python/python2.7.10/lib')
+    env.PATH.append('/home/cmartin/opt/python/python2.7.10/bin')    
