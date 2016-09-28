@@ -5,7 +5,7 @@ version = '2.7.10'
 tools = ['python']
 
 variants = [    
-    ['platform-linux', 'arch-x86_64', 'os-CentOS-6.5']
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-6']
 ]
 
 def commands():
