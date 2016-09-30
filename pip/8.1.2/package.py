@@ -1,23 +1,22 @@
-# -*- coding: utf-8 -*-
+name = 'pip'
 
-name = 'setuptools'
-
-version = '18.5'
+version = '8.1.2'
 
 tools = [
-    'easy_install'
-]
-
-build_requires = [
-    'python-2.7'    
+    'pip',
 ]
 
 variants = [
     ["platform-linux", "arch-x86_64", "python-2.7"]
 ]
 
+requires = [
+    'setuptools-18.5',
+    'python-2.7'
+]
+
 def commands():
     env.PATH.append("{root}/bin")
     env.PYTHONPATH.append("{root}/python")
 
-uuid = 'repository.setuptools'
+uuid = 'repositry.pip'

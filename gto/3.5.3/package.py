@@ -11,19 +11,12 @@ description = \
     GTO Python Library
     """
 
-requires = [
-]
-
 build_requires = [
-    "gcc-4.1.2", 
     "python-2.7"
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-6.5"]
-]
-
-tools = [
+    ["platform-linux", "arch-x86_64"]
 ]
 
 uuid = "repository.gto"

@@ -1,12 +1,19 @@
-name = 'python'
+name = "python"
 
-version = '2.7.11'
+version = "2.7.11"
 
-tools = ['python']
+build_requires = [
+]
 
-variants = [    
-    ['platform-linux', 'arch-x86_64', 'os-CentOS-6']
+variants = [
+    ["platform-linux", "arch-x86_64"]
 ]
 
 def commands():
-    env.PATH.append('/home/cmartin/opt/python/python2.7.11/bin')    
+    env.PATH.append('{root}/bin')
+    
+    if building:        
+        env.PYTHON_INCLUDE_DIR = '{root}/include'        
+
+
+uuid = "repository.python"        

@@ -2,23 +2,22 @@ name = "qt"
 
 version = "4.8.6"
 
-build_requires = [
-    "gcc-4.8.2", 
-    "python-2.7"
+build_requires = [    
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-6.5"]
+    ["platform-linux", "arch-x86_64"]
 ]
 
-tools = [
-]
 
-uuid = "repository.qt-4.8.2"
 
 def commands():
-    env.PATH.append("{root}/bin")
-    env.LD_LIBRARY_PATH.append("{root}/lib")
-    
+    env.PATH.append('{root}/bin')
     if building:
-        env.GTO_INCLUDE_DIR = "{root}/include"
+        env.QT_HOME = "{root}"
+        env.QT_VERSION = "4.8.6"
+        env.QT_INCLUDE_DIR = "{root}/include"
+        # static libs only, hence build-time only
+        env.LD_LIBRARY_PATH.append("{root}/lib")
+
+uuid = "repository.qt"        
