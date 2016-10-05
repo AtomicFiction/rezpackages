@@ -18,9 +18,7 @@ rez_set_archive(
 
 set(src_path ${CMAKE_BINARY_DIR}/pip/src/pip)
 
-if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
-    set(install_cmd bash ${CMAKE_SOURCE_DIR}/install.sh ${src_path} ${CMAKE_INSTALL_PREFIX})
-endif()
+set(install_cmd bash ${CMAKE_SOURCE_DIR}/install.sh ${src_path} ${CMAKE_INSTALL_PREFIX})
 
 ExternalProject_add(
     pip

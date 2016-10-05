@@ -22,7 +22,13 @@ endif()
 
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 
-set(configure_cmd ./configure --prefix=${CMAKE_INSTALL_PREFIX} --enable-ipv6 --enable-unicode=ucs4 --enable-shared --with-system-ffi --with-system-expat LDFLAGS=-Wl,-rpath=${CMAKE_INSTALL_PREFIX}/lib)
+if(APPLE)
+    set(config_options --enable-shared)
+elseif(UNIX)
+    set(config_options --enable-ipv6 --enable-unicode=ucs2 --enable-shared --with-system-ffi --with-system-expat LDFLAGS=-Wl,-rpath=${CMAKE_INSTALL_PREFIX}/lib)
+endif()
+
+set(configure_cmd ./configure --prefix=${CMAKE_INSTALL_PREFIX} ${config_options})
 
 ExternalProject_add(
     python

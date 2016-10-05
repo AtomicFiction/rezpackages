@@ -9,7 +9,7 @@ mkdir -p ${pypath} &> /dev/null
 
 cd ${srcpath}
 PYTHONPATH=$PYTHONPATH:${pypath} python setup.py install --prefix=${destpath} --old-and-unmanageable
-
+echo COPYING...
 mkdir -p ${destpath}/python &> /dev/null
 cp -rf ${pypath}/* ${destpath}/python/
 rm -rf ${destpath}/lib
