@@ -9,16 +9,18 @@ tools = [
 ]
 
 build_requires = [
-    'python-2.7'    
+    'python-2.7'
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "python-2.7"],
+    ['platform-linux', 'arch-x86_64', 'python-2.7'],
     ['platform-osx', 'arch-x86_64', 'python-2.7']
 ]
 
+
 def commands():
-    env.PATH.append("{root}/bin")
-    env.PYTHONPATH.append("{root}/python")
+    env.PATH.append('{root}/bin')
+    env.PYTHONPATH.append('{root}/python')
+
 
 uuid = 'repository.setuptools'

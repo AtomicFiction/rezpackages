@@ -1,30 +1,30 @@
-name = "autogen"
+name = 'autogen'
 
-version = "5.18.7"
+version = '5.18.7'
 
 authors = [
-    "GNU"
+    'GNU'
 ]
 
 description = \
-    """
+    '''
     Autogen
-    """
+    '''
 
-build_requires = [    
+build_requires = [
 ]
 
 variants = [
-    ["platform-osx", "arch-x86_64"]
+    ['platform-osx', 'arch-x86_64']
 ]
 
-tools = [    
+tools = [
 ]
 
-uuid = "repository.automake"
+uuid = 'repository.automake'
 
 def commands():
-    env.PATH.append("{root}/bin")    
+    env.PATH.append('{root}/bin')
 
-    if building:        
+    if building:
         env.ACLOCAL_PATH = '{root}/share'

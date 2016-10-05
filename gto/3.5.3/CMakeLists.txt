@@ -19,13 +19,18 @@ else()
     set(install_cmd "")
 endif()
 
-set(config_options --enable-static --with-pic LDFLAGS=-Wl,-rpath=${AF_PACKAGE_INSTALL_DIR}/lib)
+
+if(APPLE)    
+    set(config_options "")
+else(UNIX)    
+    set(config_options --enable-static --with-pic)            
+endif()
 
 ExternalProject_add(
     gto_build
     URL ${url_gto}
     PREFIX gto
-    CONFIGURE_COMMAND ./bootstrap && ./configure --prefix=${CMAKE_INSTALL_PREFIX}
+    CONFIGURE_COMMAND ./bootstrap && ./configure --prefix=${CMAKE_INSTALL_PREFIX} ${config_options}
     INSTALL_COMMAND ${install_cmd}
     BUILD_IN_SOURCE 1
     BUILD_COMMAND make

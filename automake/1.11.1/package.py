@@ -1,31 +1,32 @@
-name = "automake"
+name = 'automake'
 
-version = "1.11.1"
+version = '1.11.1'
 
 authors = [
-    "GNU"
+    'GNU'
 ]
 
 description = \
-    """
+    '''
     Automake
-    """
+    '''
 
-build_requires = [    
-    "autoconf-2"
+build_requires = [
+    'autoconf-2'
 ]
 
 variants = [
-    ["platform-osx", "arch-x86_64"]
+    ['platform-osx', 'arch-x86_64']
 ]
 
-tools = [    
+tools = [
 ]
 
-uuid = "repository.automake"
 
 def commands():
-    env.PATH.append("{root}/bin")    
+    env.PATH.append('{root}/bin')
 
-    if building:        
+    if building:
         env.ACLOCAL_PATH = '{root}/share'
+
+uuid = 'repository.automake'

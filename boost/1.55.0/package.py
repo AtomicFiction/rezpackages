@@ -11,7 +11,7 @@ description = \
     Peer-reviewed portable C++ source libraries.
     '''
 
-build_requires = [    
+build_requires = [
     'python-2.7'
 ]
 
@@ -20,7 +20,6 @@ variants = [
     ['platform-osx', 'arch-x86_64']
 ]
 
-uuid = 'repository.boost'
 
 def commands():
     if building:
@@ -29,3 +28,5 @@ def commands():
 
         # static libs
         env.LD_LIBRARY_PATH.append('{root}/lib')
+
+uuid = 'repository.boost'
