@@ -15,9 +15,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64"]
+    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
 ]
 
+uuid = "pyqt"        
 
 def commands():
     env.PATH.append("{root}/bin")    
@@ -26,4 +27,3 @@ def commands():
     if building:
         env.GTO_INCLUDE_DIR = "{root}/include"
 
-uuid = "repository.pyqt"        

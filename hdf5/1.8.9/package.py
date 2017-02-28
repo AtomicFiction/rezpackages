@@ -12,11 +12,11 @@ description = \
     """
 
 build_requires = [
-    "gcc-4.8.3"
+    "gcc-4.8.2+"
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64"]
+    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
 ]
 
 tools = [

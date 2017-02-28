@@ -7,8 +7,7 @@ tools = [
 ]
 
 variants = [
-    ['platform-linux', 'arch-x86_64', 'python-2.7'],
-    ['platform-osx', 'arch-x86_64', 'python-2.7']
+    ['platform-linux', 'arch-x86_64', 'os-Fedora-25', 'python-2.7'],    
 ]
 
 requires = [
@@ -22,4 +21,4 @@ def commands():
     env.PYTHONPATH.append('{root}/python')
 
 
-uuid = 'repositry.pip'
+uuid = 'pip'

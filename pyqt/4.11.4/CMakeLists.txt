@@ -4,11 +4,11 @@ include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-set(package_version $ENV{REZ_BUILD_PROJECT_VERSION})
+set(pyqt_version $ENV{REZ_BUILD_PROJECT_VERSION})
 
 rez_set_archive(
-    url pyqt/PyQt-x11-gpl-${package_version}.tar.gz
-    http://tcpdiag.dl.sourceforge.net/project/pyqt/PyQt4/PyQt-${package_version}/PyQt-x11-gpl-${package_version}.tar.gz
+    url pyqt/PyQt-x11-gpl-${pyqt_version}.tar.gz
+    http://tcpdiag.dl.sourceforge.net/project/pyqt/PyQt4/PyQt-${pyqt_version}/PyQt-x11-gpl-${pyqt_version}.tar.gz
 )
 
 set(make_args VERBOSE=1)
@@ -25,7 +25,7 @@ set(mod_dir ${CMAKE_INSTALL_PREFIX}/python)
 set(sip_dir ${CMAKE_INSTALL_PREFIX}/sip)
 
 ExternalProject_add(
-    package_build
+    pyqt_build
     URL ${url}
     PREFIX pyqt
     CONFIGURE_COMMAND python ./configure.py --confirm-license --bindir=${bin_dir} --destdir=${mod_dir} --sipdir=${sip_dir}

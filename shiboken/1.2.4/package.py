@@ -10,7 +10,7 @@ build_requires = [
 requires = ['python-2.7']
 
 variants = [
-    ["platform-linux", "arch-x86_64"]
+    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
 ]
 
 uuid = "repository.shiboken"

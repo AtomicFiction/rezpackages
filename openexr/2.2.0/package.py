@@ -1,44 +1,44 @@
-name = 'openexr'
+name = "openexr"
 
-version = '2.2.0'
+version = "2.2.0"
 
 authors = [
-    'ILM'
+    "ILM"
 ]
 
 description = \
-    '''
+    """
     ILM's high dynamic-range (HDR) image file format library.
-    '''
+    """
 
 requires = [
-    'ilmbase-2.2'
+    "ilmbase-2.2"
 ]
 
-build_requires = [    
-    'ilmbase-2.2.0',    
+build_requires = [
+    "gcc-4.8.2+"
 ]
 
 variants = [
-    ['platform-linux', 'arch-x86_64']
+    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
 ]
 
 tools = [
-    'exrenvmap',
-    'exrheader',
-    'exrmakepreview',
-    'exrmaketiled',
-    'exrmultipart',
-    'exrmultiview',
-    'exrstdattr'
+    "exrenvmap",
+    "exrheader",
+    "exrmakepreview",
+    "exrmaketiled",
+    "exrmultipart",
+    "exrmultiview",
+    "exrstdattr"
 ]
 
-uuid = 'repository.openexr'
+uuid = "repository.openexr"
 
 def commands():
-    env.PATH.append('{root}/bin')
-    env.LD_LIBRARY_PATH.append('{root}/lib')
+    env.PATH.append("{root}/bin")
+    env.LD_LIBRARY_PATH.append("{root}/lib")
 
     if building:
-        env.OPENEXR_INCLUDE_DIR = '{root}/include'
-        
+        env.PKG_CONFIG_PATH.append("{root}/lib/pkgconfig")
+        env.OPENEXR_INCLUDE_DIR = "{root}/include"

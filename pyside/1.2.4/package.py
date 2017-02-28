@@ -1,3 +1,4 @@
+
 name = "pyside"
 
 version = "1.2.4"
@@ -15,17 +16,17 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64"]
+    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
 ]
 
 uuid = "repository.pyside"
 
 def commands():
     env.PATH.append('{root}/bin')
-    env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
-    env.LD_LIBRARY_PATH.append('{root}/lib')
+    env.PYTHONPATH.append('{root}/lib64/python2.7/site-packages')    
     
     if building:        
         env.SHIBOKEN_INCLUDE_DIR = '{root}/include'
+        env.LD_LIBRARY_PATH.append('{root}/lib')
 
         

@@ -27,7 +27,7 @@ ExternalProject_add(
     URL ${url_shiboken}
     PREFIX shiboken        
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-               -DPYTHON_LIBRARY=$ENV{REZ_PYTHON_ROOT}/lib/libpython2.7.so
+               #-DPYTHON_LIBRARY=$ENV{REZ_PYTHON_ROOT}/python/lib/libpython2.7.so
                -DBUILD_TESTS=False
                -DCMAKE_BUILD_TYPE=Release 
 )
