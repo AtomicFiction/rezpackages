@@ -14,12 +14,14 @@ else()
     set(install_cmd "")
 endif()
 
+set(GIT_EXECUTABLE /opt/git/git2.7.0/bin/git)
+
 ExternalProject_add(
     openimageio
     GIT_REPOSITORY https://github.com/OpenImageIO/oiio.git
     GIT_TAG Release-${openimageio_version}
     PREFIX openimageio
-    CMAKE_ARGS 
+    CMAKE_ARGS
     -DUSE_PYTHON=ON
     -DBOOST_ROOT=$ENV{REZ_BOOST_ROOT}
     -DBOOST_LIBRARYDIR=$ENV{REZ_BOOST_ROOT}/lib

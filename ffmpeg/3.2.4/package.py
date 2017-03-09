@@ -15,7 +15,7 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
 tools = [
@@ -23,7 +23,7 @@ tools = [
     "ffmpeg-10bit",
     "ffserver",
     "qt-quickstart"
-    "ffprobe",    
+    "ffprobe",
 ]
 
 uuid = "ffmpeg"

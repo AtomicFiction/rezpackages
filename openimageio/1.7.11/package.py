@@ -22,7 +22,7 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25", "python-2.7"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
 ]
 
 tools = [
@@ -39,7 +39,7 @@ uuid = "openimageio"
 def commands():
     env.PATH.append("{root}/bin")
     env.PYTHONPATH.append("{root}/lib/python/site-packages")
-    
+
     if building:
-        env.OIIO_INCLUDE_DIR = "{root}/include"        
+        env.OIIO_INCLUDE_DIR = "{root}/include"
         env.LD_LIBRARY_PATH.append("{root}/lib")

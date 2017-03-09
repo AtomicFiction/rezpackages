@@ -10,14 +10,14 @@ build_requires = [
 requires = ['python-2.7']
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
 uuid = "repository.shiboken"
 
 def commands():
     env.PATH.append('{root}/bin')
-    
-    if building:        
+
+    if building:
         env.SHIBOKEN_INCLUDE_DIR = '{root}/include'
         env.LD_LIBRARY_PATH.append('{root}/lib')

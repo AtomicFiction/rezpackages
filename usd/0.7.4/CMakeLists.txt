@@ -35,8 +35,6 @@ ExternalProject_add(
                -DOPENSUBDIV_INCLUDE_DIR=$ENV{REZ_OPENSUBDIV_ROOT}/include
                -OPENSUBDIV_ROOT_DIR=$ENV{REZ_OPENSUBDIV_ROOT}
                -DBOOST_ROOT=$ENV{REZ_BOOST_ROOT}
-               -DDOUBLE_CONVERSION_INCLUDE_DIR=$ENV{REZ_DOUBLECONVERSION_ROOT}/include
-               -DDOUBLE_CONVERSION_LIBRARY=$ENV{REZ_DOUBLECONVERSION_ROOT}/lib/libdouble-conversion.so
                -DPYSIDE_BIN_DIR=$ENV{REZ_PYSIDE_ROOT}/bin
                -DPXR_BUILD_MAYA_PLUGIN=TRUE
                -DMAYA_LOCATION=/opt/autodesk/maya/maya2016EXT2-x64
@@ -44,5 +42,6 @@ ExternalProject_add(
                -DPXR_MAYA_TBB_BUG_WORKAROUND=ON
                -DPXR_BUILD_KATANA_PLUGIN=TRUE
                -DKATANA_API_LOCATION=/opt/thefoundry/katana/katana2.5v4
+               -DPXR_ENABLE_NAMESPACES=ON
 )
 

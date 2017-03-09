@@ -1,13 +1,12 @@
 
 name = "usd"
 
-version = "0.7.3"
+version = "0.7.4"
 
 build_requires = [
     'python-2.7',
     'boost-1.55',
     'openexr-2.2.0',
-    'doubleconversion-1.1',
     'tbb-4.4',
     'opensubdiv-3.0.5+',
     'openimageio-1.5.11+',

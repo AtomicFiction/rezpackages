@@ -12,7 +12,7 @@ description = \
     """
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-6.5"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
 tools = [

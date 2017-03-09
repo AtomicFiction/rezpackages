@@ -19,7 +19,7 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25", "python-2.7"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
 ]
 
 tools = [
@@ -35,6 +35,6 @@ def commands():
 
     if building:
         env.OCIO_INCLUDE_DIR = "{root}/include"
-        
+
         # static libs only, hence build-time only
         env.LD_LIBRARY_PATH.append("{root}/lib")

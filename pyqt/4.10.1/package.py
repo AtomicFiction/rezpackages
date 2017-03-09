@@ -1,6 +1,6 @@
 name = "pyqt"
 
-version = "4.11.4"
+version = "4.10.1"
 
 build_requires = [
     "qt-4.8",

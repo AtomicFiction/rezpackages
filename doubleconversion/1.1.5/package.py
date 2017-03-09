@@ -15,7 +15,7 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
 uuid = "doublconversion"
@@ -23,5 +23,5 @@ uuid = "doublconversion"
 def commands():
     if building:
         env.DOUBLE_CONVERSION_INCLUDE_DIR = "{root}/include"
-        env.LD_LIBRARY_PATH.append("{root}/lib")    
+        env.LD_LIBRARY_PATH.append("{root}/lib")
         # env.DOUBLE_CONVERSION_LIBRARY = "{root}/usr/local/lib/libdouble-conversion.so"

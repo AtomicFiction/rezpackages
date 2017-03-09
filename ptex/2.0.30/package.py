@@ -11,7 +11,7 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-Fedora-25"]
+    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
 uuid = "ptex"
