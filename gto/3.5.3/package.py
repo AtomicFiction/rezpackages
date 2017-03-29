@@ -16,21 +16,17 @@ requires = [
 ]
 
 build_requires = [
-    # 'autoconf',
-    # 'automake',
-    # 'libtool',
+    'gcc-4.8+',
     'python-2.7'
 ]
 
 variants = [
-    ['platform-linux', 'arch-x86_64'],
-    ['platform-osx', 'arch-x86_64']
+    ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
 ]
 
 
 def commands():
     env.PATH.append('{root}/bin')
-    #env.LD_LIBRARY_PATH.append('{root}/lib')
     env.PYTHONPATH.append('{root}/python/lib/python2.7/site-packages')
 
     if building:

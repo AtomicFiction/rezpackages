@@ -30,8 +30,14 @@ uuid = "usd"
 def commands():
     env.PYTHONPATH.append('{root}/lib/python')
     env.PATH.append('{root}/bin')
-    env.MAYA_PLUG_IN_PATH.append('{root}/third_party/maya/plugin')
-    env.MAYA_SCRIPT_PATH.append('{root}/third_party/maya/share/usd/plugins/usdMaya/resources')
+
+    if 'maya' in request:
+        env.MAYA_PLUG_IN_PATH.append('{root}/third_party/maya/plugin')
+        env.MAYA_SCRIPT_PATH.append('{root}/third_party/maya/share/usd/plugins/usdMaya/resources')
+
+    if 'katana' in request:
+        env.KATANA_RESOURCES.append('{root}/third_party/katana/plugin')
+        env.KATANA_POST_PYTHONPATH.append('{root}/third_party/katana/lib')
 
     if building:
         env.USD_INCLUDE_DIR = '{root}/include'

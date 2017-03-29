@@ -15,7 +15,7 @@ uuid = "katana"
 
 def commands():
     env.KATANA_VERSION = "2.5v4"
-    env.KATANA_LOCATION = "/opt/thefoundry/katana/${KATANA_VERSION}"
+    env.KATANA_LOCATION = "/opt/thefoundry/katana/katana${KATANA_VERSION}"
     env.PATH.prepend("${KATANA_LOCATION}")
     env.KATANA_RESOURCES=''
 
