@@ -17,6 +17,7 @@ uuid = "repository.shiboken"
 
 def commands():
     env.PATH.append('{root}/bin')
+    env.PYTHONPATH.append('{root}/lib64/python2.7/site-packages')
 
     if building:
         env.SHIBOKEN_INCLUDE_DIR = '{root}/include'
