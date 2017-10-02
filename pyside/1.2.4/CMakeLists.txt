@@ -6,16 +6,6 @@ include(ExternalProject)
 
 set(pyside_version $ENV{REZ_BUILD_PROJECT_VERSION})
 
-rez_set_archive(
-    url_pyside pyside/PySide-${pyside_version}.tar.gz
-    https://codeload.github.com/PySide/pyside/tar.gz/1.2.4/pyside-${pyside_version}.tar.gz    
-)
-
-rez_set_archive(
-    url_pyside_tools pyside/Tools-0.2.15.tar.gz
-    https://github.com/pyside/Tools/archive/0.2.15.tar.gz    
-)
-
 set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1)
 
 if(${REZ_BUILD_INSTALL})
@@ -26,25 +16,26 @@ endif()
 
 ExternalProject_add(
     pyside
-    URL ${url_pyside}
-    PREFIX pyside        
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} 
-               -DBUILDSTATIC=ON 
-               -DLINKSTATIC=ON 
-               -DCMAKE_SKIP_BUILD_RPATH=FALSE 
-               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE 
-               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib             
+    GIT_REPOSITORY git@github.com:AtomicFiction/PySide.git
+    GIT_TAG 1.2.4
+    PREFIX pyside
+    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+               -DBUILDSTATIC=ON
+               -DLINKSTATIC=ON
+               -DCMAKE_SKIP_BUILD_RPATH=FALSE
+               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE
+               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib
 )
 
 ExternalProject_add(
     pyside-tools
-    URL ${url_pyside_tools}
-    PREFIX pyside-tools     
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} 
-               -DBUILDSTATIC=ON 
-               -DLINKSTATIC=ON 
-               -DCMAKE_SKIP_BUILD_RPATH=FALSE 
-               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE 
-               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib             
+    GIT_REPOSITORY git@github.com:AtomicFiction/Tools.git
+    GIT_TAG 0.2.15
+    PREFIX pyside-tools
+    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+               -DBUILDSTATIC=ON
+               -DLINKSTATIC=ON
+               -DCMAKE_SKIP_BUILD_RPATH=FALSE
+               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE
+               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib
 )
-
