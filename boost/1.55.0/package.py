@@ -12,7 +12,8 @@ description = \
     """
 
 build_requires = [
-    "gcc-4.8.2+"
+    "gcc-4.8.2+",
+    'python-2.7+'
 ]
 
 variants = [
