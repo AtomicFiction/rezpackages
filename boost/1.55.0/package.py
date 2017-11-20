@@ -26,4 +26,4 @@ def commands():
     env.LD_LIBRARY_PATH.append("{root}/lib")
 
     if building:
-        env.BOOST_INCLUDE_DIR = "{root}/include"
+        env.CPATH.append("{root}/include")
