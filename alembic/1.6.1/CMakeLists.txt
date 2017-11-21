@@ -4,13 +4,7 @@ include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-
 set(alembic_version $ENV{REZ_BUILD_PROJECT_VERSION})
-
-# rez_set_archive(
-#     url_alembic alembic/alembic-${alembic_version}.tar.gz
-#     http://download.savannah.nongnu.org/releases/alembic/alembic-${alembic_version}.tar.gz
-# )
 
 set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1)
 
