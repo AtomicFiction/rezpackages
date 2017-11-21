@@ -36,9 +36,9 @@ uuid = "alembic"
 
 def commands():
     env.PATH.append("{root}/bin")
-    # env.LD_LIBRARY_PATH.append("{root}/lib")
     env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
 
     if building:
-        env.PKG_CONFIG_PATH.append("{root}/lib/pkgconfig")
-        env.ALEMBIC_INCLUDE_DIR = "{root}/include"
+        env.CMAKE_MODULE_PATH.append('{root}/lib/cmake')
+        env.LD_LIBRARY_PATH.append("{root}/lib")
+        env.CPATH.append("{root}/include")
