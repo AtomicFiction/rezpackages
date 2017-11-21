@@ -30,6 +30,13 @@ variants = [
 ]
 
 tools = [
+    'abcconvert',
+    'abcdiff',
+    'abcecho',
+    'abcechobounds',
+    'abcls',
+    'abcstitcher',
+    'abctree'
 ]
 
 uuid = "alembic"
