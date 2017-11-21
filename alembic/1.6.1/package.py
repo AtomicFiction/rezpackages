@@ -22,7 +22,7 @@ build_requires = [
     "boost-1.55",
     "pyilmbase-2",
     "python-2.7",
-    "hdf5-1.8.9+"
+    "hdf5-1.8.12+"
 ]
 
 variants = [
