@@ -4,6 +4,7 @@ name = "glfw"
 version = "3.2.1"
 
 build_requires = [
+    'gcc'
 ]
 
 requires = [
