@@ -19,7 +19,8 @@ uuid = "glfw"
 def commands():
 
     if building:
-        env.GLFW_INCLUDE_DIR = '{root}/include'
+        env.CPATH.append('{root}/include')
+        env.CMAKE_MODULE_PATH.append('{root}/lib/cmake')
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
         env.LD_LIBRARY_PATH.append('{root}/lib')
-
 
