@@ -25,7 +25,9 @@ ExternalProject_add(
     URL ${url_glfw}
     PREFIX glfw        
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} 
-               -DBUILD_SHARED_LIBS=ON
-               -DBUILD_STATIC_LIBS=ON             
+               -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+               -DBUILD_SHARED_LIBS=OFF
+               -DBUILD_TESTS=OFF
+               -DBUILD_DOCS=OFF
 )
 
