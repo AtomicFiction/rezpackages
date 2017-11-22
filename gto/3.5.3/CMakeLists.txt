@@ -11,7 +11,7 @@ rez_set_archive(
     https://open-gto.googlecode.com/files/open-gto-${gto_version}.tar.gz
 )
 
-set(make_args VERBOSE=1)
+set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1)
 
 if(${REZ_BUILD_INSTALL})
     set(install_cmd make install)
