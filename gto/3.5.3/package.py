@@ -24,6 +24,14 @@ variants = [
     ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
 ]
 
+tools = [
+    'gto2obj',
+    'gtofilter',
+    'gtoimage',
+    'gtoinfo',
+    'gtomerge'
+]
+
 
 def commands():
     env.PATH.append('{root}/bin')
