@@ -22,11 +22,9 @@ endif()
 ExternalProject_add(
     opencolorio
     PREFIX opencolorio
-    #GIT_REPOSITORY https://github.com/imageworks/OpenColorIO.git
-    #GIT_TAG v${opencolorio_version}
     URL ${url_opencolorio}
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-    -DCMAKE_SKIP_BUILD_RPATH=OFF
-    -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF
-    -DCMAKE_INSTALL_RPATH=${CMAKE_INSTALL_PREFIX}/lib
+               -DCMAKE_SKIP_BUILD_RPATH=OFF
+               -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF
+               -DCMAKE_INSTALL_RPATH=${CMAKE_INSTALL_PREFIX}/lib
 )
