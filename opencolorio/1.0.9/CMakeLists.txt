@@ -8,7 +8,7 @@ set(opencolorio_version $ENV{REZ_BUILD_PROJECT_VERSION})
 
 rez_set_archive(
     url_opencolorio opencolorio/opencolorio-${opencolorio_version}.tar.gz
-    http://download.savannah.nongnu.org/releases/openexr/openexr-${openexr_version}.tar.gz
+    http://github.com/imageworks/OpenColorIO/tarball/v${opencolorio_version}
 )
 
 set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1)
