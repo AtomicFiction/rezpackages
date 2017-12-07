@@ -9,3 +9,4 @@ package_archives/x264/x264-snapshot-20171123-2245-stable.tar.bz2 filter=lfs diff
 package_archives/x265/x265_2.6.tar.gz filter=lfs diff=lfs merge=lfs -text
 package_archives/fdk-aac/fdk-aac-0.1.5.tar.gz filter=lfs diff=lfs merge=lfs -text
 package_archives/lame/lame-3.100.tar.gz filter=lfs diff=lfs merge=lfs -text
+package_archives/opus/opus-1.2.1.tar.gz filter=lfs diff=lfs merge=lfs -text
