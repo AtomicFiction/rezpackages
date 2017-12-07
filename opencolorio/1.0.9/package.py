@@ -32,9 +32,10 @@ uuid = "opencolorio"
 def commands():
     env.PATH.append("{root}/bin")
     env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
+    env.LD_LIBRARY_PATH.append("{root}/lib")
 
     if building:
         env.CPATH.append("{root}/include")
         env.LIBRARY_PATH.append("{root}/lib")
-        env.LD_LIBRARY_PATH.append("{root}/lib")
         env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
+
