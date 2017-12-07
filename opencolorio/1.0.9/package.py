@@ -34,7 +34,7 @@ def commands():
     env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
 
     if building:
-        env.OCIO_INCLUDE_DIR = "{root}/include"
-
-        # static libs only, hence build-time only
+        env.CPATH.append("{root}/include")
+        env.LIBRARY_PATH.append("{root}/lib")
         env.LD_LIBRARY_PATH.append("{root}/lib")
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
