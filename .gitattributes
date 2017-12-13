@@ -2,3 +2,4 @@
 *.tgz filter=lfs diff=lfs merge=lfs -text
 package_archives/cmake/cmake-3.10.0.tar.gz filter=lfs diff=lfs merge=lfs -text
 package_archives/qt/qt-everywhere-opensource-src-5.6.3.tar.xz filter=lfs diff=lfs merge=lfs -text
+package_archives/pyside/pyside-2-qt5.6.tar.gz filter=lfs diff=lfs merge=lfs -text
