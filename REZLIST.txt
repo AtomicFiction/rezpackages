@@ -6,8 +6,9 @@
 ./automake/1.11.1 -- OSX only
 ./automake/1.15 -- OSX only
 ./boost/1.55.0 -- Works! (shared and static) (CMake and package updated)
+./cmake/3.10.0 -- Works!
 ./doubleconversion/1.1.5 -- Works! (shared and static) (CMake and package updated)
-./fdk_aac/0.1.5 -- Works!
+./fdk_aac/0.1.5 -- Works! (static only)
 ./ffmpeg/3.0.7 -- removed
 ./ffmpeg/3.2.4 -- removed
 ./ffmpeg/3.4 -- Works partially, see CMakeLists and package for details
@@ -21,18 +22,18 @@
 ./hdf5/1.8.9 -- removed
 ./ilmbase/2.2.0 -- Works! (shared and static) (CMake and package updated)
 ./katana/2.5.4 -- Works! (native to system)
-./lame/3.100 -- Works!
+./lame/3.100 -- Works! (static only)
 ./libtool/2.2.6b -- OSX only
 ./libtool/2.4.6 -- OSX only
 ./maya/2016.5 -- Works! (native to system)
 ./maya/2016EXT1SP5 -- Works! (native to system)
 ./maya/2016EXT2 -- Works! (native to system)
-./ogg/1.3.3 -- Works!
-./opencolorio/1.0.9 -- Works! (builds both)
-./openexr/2.2.0 -- Works! (builds both)
-./openimageio/1.7.11 -- Works!
+./ogg/1.3.3 -- Works! (static only)
+./opencolorio/1.0.9 -- Works! (shared and static) (CMake and package updated)
+./openexr/2.2.0 -- Works! (shared and static) (CMake and package updated)
+./openimageio/1.7.11 -- Failing: need to recompile ffmpeg with PIC
 ./opensubdiv/3.2.0 -- Works! (builds both)
-./opus/1.2.1 -- ffmpeg fails to configure with this
+./opus/1.2.1 -- ffmpeg fails to configure with this (static only)
 ./os/CentOS-6.5 -- Works! (empty build)
 ./pip/7.1.2 -- tar missing from package_archives
 ./pip/8.1.2 -- Works!
@@ -45,27 +46,30 @@
 ./pyqt/4.10.1 -- tar missing from package_archives
 ./pyqt/4.11.4 -- Works!
 ./pyside/1.2.4 -- Works! (using rpath)
+./pyside/2-qt5.6 -- Works! (custom tar archive)
 ./pyside-tools/0.2.15 -- Works! (using rpath)
 ./python/2.7.10 -- for Centos 6.5
 ./python/2.7.11 -- tar missing from package_archives
 ./python/2.7.13 -- Works! (empty build)
 ./python/2.7.5 -- Works! (native to system)
-./python_libraries/build
 ./python_libraries/CMakeLists.txt
 ./python_libraries/package.py
 ./qt/4.8.6 -- Shared (static does not work downstream)
+./qt/5.6.1 -- Works! (shared only)
 ./scons/2.5.1 -- Works! (does not create libraries)
 ./setuptools/18.5 -- Works! (does not create libraries)
 ./shiboken/1.2.4 -- Works!
 ./sip/4.16.9 -- Works!
 ./tbb/4.3 -- Shared only
-./tbb/4.4 -- Shared only
+./tbb/4.3.1 -- Works! (shared only)
+./tbb/4.4 -- Works! (shared only)
+./tbb/2017_U6 -- Works! (shared only)
 ./usd/0.7.3
 ./usd/0.7.4
 ./usd/0.8.1
 ./virtualenv/15.0.3 -- tar missing from package_archives
-./vorbis/1.3.5 -- ffmpeg fails to configure with this
-./vpx/1.6.1 -- Works!
-./x264/20171123-2245-stable -- Works!
-./x265/2.6 -- ffmpeg fails to configure with this
-./yasm/1.3.0 -- Works!
+./vorbis/1.3.5 -- ffmpeg fails to configure with this (static only)
+./vpx/1.6.1 -- Works! (static only)
+./x264/20171123-2245-stable -- Works! (static only)
+./x265/2.6 -- ffmpeg fails to configure with this (static only)
+./yasm/1.3.0 -- Works! (static only)
