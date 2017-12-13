@@ -5,7 +5,7 @@ version = "2-qt5.6"
 build_requires = [
     'qt-5.6',
     'python-2.7',
-    'cmake-3.1+'
+    'cmake-3.10+'
 ]
 
 requires = [
