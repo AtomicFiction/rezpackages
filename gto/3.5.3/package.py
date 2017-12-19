@@ -24,12 +24,21 @@ variants = [
     ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
 ]
 
+tools = [
+    'gto2obj',
+    'gtofilter',
+    'gtoimage',
+    'gtoinfo',
+    'gtomerge'
+]
+
 
 def commands():
     env.PATH.append('{root}/bin')
-    env.PYTHONPATH.append('{root}/python/lib/python2.7/site-packages')
+    env.PYTHONPATH.append('{root}/python/lib64/python2.7/site-packages')
+    env.INFOPATH.append('{root}/share/info')
 
     if building:
-        env.GTO_INCLUDE_DIR = '{root}/include'
+        env.CPATH.append('{root}/include')
 
 uuid = 'repository.gto'

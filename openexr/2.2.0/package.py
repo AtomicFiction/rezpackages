@@ -40,5 +40,8 @@ def commands():
     env.LD_LIBRARY_PATH.append("{root}/lib")
 
     if building:
+        env.LIBRARY_PATH.append("{root}/lib")
         env.PKG_CONFIG_PATH.append("{root}/lib/pkgconfig")
-        env.OPENEXR_INCLUDE_DIR = "{root}/include"
+        env.CPATH.append("{root}/include")
+        env.M4PATH.append('{root}/aclocal')
+

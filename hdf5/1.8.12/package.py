@@ -45,7 +45,8 @@ def commands():
     env.PATH.append("{root}/bin")
 
     if building:
-        env.HDF5_INCLUDE_DIR = "{root}/include"
+        env.CPATH.append("{root}/include")
+        env.CMAKE_MODULE_PATH.append('{root}/share/cmake')
 
         # static libs
         env.LD_LIBRARY_PATH.append("{root}/lib")

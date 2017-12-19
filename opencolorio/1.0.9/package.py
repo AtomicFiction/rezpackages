@@ -32,9 +32,10 @@ uuid = "opencolorio"
 def commands():
     env.PATH.append("{root}/bin")
     env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
+    env.LD_LIBRARY_PATH.append("{root}/lib")
 
     if building:
-        env.OCIO_INCLUDE_DIR = "{root}/include"
+        env.CPATH.append("{root}/include")
+        env.LIBRARY_PATH.append("{root}/lib")
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
 
-        # static libs only, hence build-time only
-        env.LD_LIBRARY_PATH.append("{root}/lib")
