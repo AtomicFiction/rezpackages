@@ -23,12 +23,9 @@ ExternalProject_add(
     ffmpeg
     URL ${url_ffmpeg}
     PREFIX ffmpeg
-    UPDATE_COMMAND ""
-    CONFIGURE_COMMAND ./configure --prefix=${CMAKE_INSTALL_PREFIX} --enable-pic --pkg-config-flags=--static --extra-libs="-lpthread" --enable-gpl --enable-nonfree --enable-libx264 --enable-libfdk-aac --enable-libmp3lame
-    # The fully featured configuration command is below but fails for x265, vorbis, opus and freetype
-    #CONFIGURE_COMMAND ./configure --prefix=${CMAKE_INSTALL_PREFIX} --enable-pic --pkg-config-flags="--static" --extra-libs="-lpthread" --enable-gpl --enable-nonfree --enable-libx264 --enable-libx265 --enable-libfdk-aac --enable-libmp3lame --enable-libopus --enable-libvorbis --enable-libfreetype
-    INSTALL_COMMAND "${install_cmd}"
     BUILD_IN_SOURCE 1
+    CONFIGURE_COMMAND ./configure --prefix=${CMAKE_INSTALL_PREFIX} --enable-pic --pkg-config-flags=--static --extra-libs=-lpthread --extra-libs=-lm --enable-gpl --enable-nonfree --enable-libx264 --enable-libx265 --enable-libfdk-aac --enable-libmp3lame --enable-libopus --enable-libvorbis --enable-libfreetype
     BUILD_COMMAND make ${make_args}
+    INSTALL_COMMAND "${install_cmd}"
 )
 
