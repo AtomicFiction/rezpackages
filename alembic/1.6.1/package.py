@@ -3,11 +3,14 @@ name = "alembic"
 version = "1.6.1"
 
 authors = [
-    ""
+    'Sony Pictures Imageworks, Inc.',
+    'Industrial Light and Magic'
 ]
 
 description = \
     """
+    Alembic is an open framework for storing and sharing scene data that includes a
+    C++ library, a file format, and client plugins and applications. 
     """
 
 requires = [
