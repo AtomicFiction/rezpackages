@@ -13,15 +13,18 @@ description = \
     machines have created.
     '''
 
+private_build_requires = [
+    'yasm'
+]
+
 build_requires = [
     'gcc',
-    'yasm',
     'x264',
-    'x265', # not enabled
+    'x265',
     'fdk_aac',
     'lame',
-    'opus', # not enabled
-    'vorbis', # not enabled
+    'opus',
+    'vorbis',
     'vpx'
 ]
 
