@@ -18,7 +18,7 @@ description = \
     doubles.
     """
 
-build_requires = [
+private_build_requires = [
     "scons"
 ]
 
@@ -29,6 +29,8 @@ variants = [
 uuid = "doublconversion"
 
 def commands():
+    env.LD_LIBRARY_PATH.append("{root}/lib")
+
     if building:
         env.CPATH.append("{root}/include")
-        env.LD_LIBRARY_PATH.append("{root}/lib")
+        env.LIBRARY_PATH.append("{root}/lib")
