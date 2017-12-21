@@ -13,19 +13,21 @@ description = \
     C++ library, a file format, and client plugins and applications. 
     """
 
-requires = [
-    "pyilmbase-2",
-    "boost-1.55"
+private_build_requires = [
+    "boost-1.55",
+    'maya'
 ]
 
 build_requires = [
-    "gcc-4.8.2+",
+    'gcc-4.8.2+'
+]
+
+requires = [
     "openexr-2.2",
-    "ilmbase-2.2",
-    "boost-1.55",
-    "pyilmbase-2",
     "python-2.7",
-    "hdf5-1.8.12+"
+    "ilmbase-2.2",
+    "hdf5-1.8.12+",
+    "pyilmbase-2"
 ]
 
 variants = [
