@@ -27,3 +27,4 @@ def commands():
 
     if building:
         env.CPATH.append("{root}/include")
+        env.LIBRARY_PATH.append("{root}/lib")
