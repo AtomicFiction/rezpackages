@@ -3,11 +3,19 @@ name = "doubleconversion"
 version = "1.1.5"
 
 authors = [
-    ""
+    'Google Inc.',
+    'Mozilla Foundation',
+    'Jeff Muizelaar <jmuizelaar@mozilla.com>',
+    'Mike Hommey <mhommey@mozilla.com>',
+    'Martin Olsson <mnemo@minimum.se>',
+    'Kent Williams <chaircrusher@gmail.com>',
+    'Elan Ruusamae <glen@delfi.ee>'
 ]
 
 description = \
     """
+    Efficient binary-decimal and decimal-binary conversion routines for IEEE
+    doubles.
     """
 
 build_requires = [
