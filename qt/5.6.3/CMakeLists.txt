@@ -20,8 +20,6 @@ else()
     set(install_cmd "")
 endif()
 
-# -no-webkit 
-
 ExternalProject_add(
     qt
     URL ${url_qt}

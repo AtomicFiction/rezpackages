@@ -24,14 +24,16 @@ ExternalProject_add(
     BUILD_COMMAND make tbb_build_prefix="${build_prefix}" -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1
 )
 
-ExternalProject_Get_Property(tbb SOURCE_DIR)
+if(${REZ_BUILD_INSTALL})
+    ExternalProject_Get_Property(tbb SOURCE_DIR)
 
-set(include_dir ${SOURCE_DIR}/include)
-set(release_dir ${SOURCE_DIR}/build/${build_prefix}_release)
+    set(include_dir ${SOURCE_DIR}/include)
+    set(release_dir ${SOURCE_DIR}/build/${build_prefix}_release)
 
-install(DIRECTORY ${include_dir}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include
-        FILES_MATCHING PATTERN "*.h")
+    install(DIRECTORY ${include_dir}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+            FILES_MATCHING PATTERN "*.h")
 
-install(DIRECTORY ${release_dir}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/release
-        FILES_MATCHING PATTERN "*.so*")
+    install(DIRECTORY ${release_dir}/ DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/release
+            FILES_MATCHING PATTERN "*.so*")
+endif(${REZ_BUILD_INSTALL})
 

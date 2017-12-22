@@ -11,12 +11,12 @@ description = \
     ILM's high dynamic-range (HDR) image file format library.
     """
 
-requires = [
-    "ilmbase-2.2"
+private_build_requires = [
+    "gcc-4.8.2+"
 ]
 
-build_requires = [
-    "gcc-4.8.2+"
+requires = [
+    "ilmbase-2.2"
 ]
 
 variants = [

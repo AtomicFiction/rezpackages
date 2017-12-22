@@ -14,8 +14,10 @@ description = \
 build_requires = [
     "boost-1.55",
     "gcc-4.8.2+",
-    "python-2.7"
+]
 
+requires = [
+    "python-2.7"
 ]
 
 variants = [

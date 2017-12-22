@@ -23,13 +23,12 @@ ExternalProject_add(
     x265
     URL ${url_x265}
     PREFIX x265
-    UPDATE_COMMAND ""
+    BUILD_IN_SOURCE 1
     CONFIGURE_COMMAND ${CMAKE_COMMAND} -G "Unix Makefiles" source
                -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
                -DENABLE_SHARED=OFF
-               -DPOSITION_INDEPENDENT_CODE=ON
+               -DCMAKE_POSITION_INDEPENDENT_CODE=ON
     BUILD_COMMAND make ${make_args}
     INSTALL_COMMAND ${install_cmd}
-    BUILD_IN_SOURCE 1
 )
 
