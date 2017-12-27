@@ -11,7 +11,7 @@ description = \
     Utility libraries from ILM used by OpenEXR.
     """
 
-build_requires = [
+private_build_requires = [
     "gcc-4.8.2+"
 ]
 
