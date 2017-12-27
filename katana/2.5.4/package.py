@@ -20,4 +20,5 @@ def commands():
     env.KATANA_RESOURCES=''
 
     if building:
-        env.KATANA_INCLUDE = ("${KATANA_LOCATION}/plugin_apis/include")
+        env.KATANA_INCLUDE = "${KATANA_LOCATION}/plugin_apis/include"
+        env.CPATH.append("${KATANA_LOCATION}/plugin_apis/include")
