@@ -8,7 +8,7 @@ authors = [
 
 description = \
     """
-    Utility libraries from ILM used by OpenEXR.
+    Python bindings for the utility libraries from ILM used by OpenEXR.
     """
 
 build_requires = [
