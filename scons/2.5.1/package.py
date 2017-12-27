@@ -28,7 +28,7 @@ description = \
     use SCons effectively.
     '''
 
-build_requires = [
+requires = [
     "python-2.7"
 ]
 
@@ -41,3 +41,4 @@ uuid = "scons"
 def commands():
     env.PATH.append("{root}/bin")
     env.PYTHONPATH.append("{root}/lib/python2.7/site-packages")
+    env.MANPATH.append('{root}/share/man')
