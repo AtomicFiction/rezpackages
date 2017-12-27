@@ -15,6 +15,15 @@ variants = [
     ["platform-linux", "arch-x86_64", "os-CentOS-7"]
 ]
 
+tools = [
+    'far_perf'
+    'far_regression'
+    'hbr_baseline'
+    'hbr_regression'
+    'stringify'
+    'tutorials'
+]
+
 uuid = "opensubdiv"
 
 def commands():
