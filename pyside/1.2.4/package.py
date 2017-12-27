@@ -2,7 +2,15 @@ name = "pyside"
 
 version = "1.2.4"
 
+authors = [
+    'Qt Project <www.qt.io>'
 ]
+
+description = \
+    '''
+    This repository contains the CPython Qt bindings generated using the
+    Shiboken generator.
+    '''
 
 requires = [
     'shiboken-1.2.4',
