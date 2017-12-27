@@ -1,11 +1,11 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
 
 include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-
 set(openimageio_version $ENV{REZ_BUILD_PROJECT_VERSION})
+
 set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1)
 
 if(${REZ_BUILD_INSTALL})
