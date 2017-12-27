@@ -21,12 +21,10 @@ description = \
     Python bindings generator that uses API Extractor and outputs CPython code.
     '''
 
-build_requires = [
+requires = [
     'qt-4.8',
     'python-2.7'
 ]
-
-requires = ['python-2.7']
 
 variants = [
     ["platform-linux", "arch-x86_64", "os-CentOS-7"]
