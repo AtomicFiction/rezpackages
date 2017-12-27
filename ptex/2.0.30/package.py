@@ -23,10 +23,10 @@ uuid = "ptex"
 
 def commands():
     env.PATH.append("{root}/bin")
+    env.LD_LIBRARY_PATH.append('{root}/lib')
 
     if building:
-        env.PTEX_INCLUDE_DIR = '{root}/include'
-        env.PTEX_LOCATION = '{root}'
-        env.LD_LIBRARY_PATH.append('{root}/lib')
+        env.CPATH.append('{root}/include')
+        env.LIBRARY_PATH.append('{root}/lib')
 
 
