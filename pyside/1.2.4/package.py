@@ -25,11 +25,11 @@ variants = [
 uuid = "repository.pyside"
 
 def commands():
-    env.PATH.append('{root}/bin')
     env.PYTHONPATH.append('{root}/lib64/python2.7/site-packages')
+    env.LD_LIBRARY_PATH.append('{root}/lib')
 
     if building:
-        env.SHIBOKEN_INCLUDE_DIR = '{root}/include'
-        env.LD_LIBRARY_PATH.append('{root}/lib')
-
+        env.CPATH.append('{root}/include')
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
+        env.CMAKE_MODULE_PATH.append('{root}/lib/cmake/PySide-{version}')
 
