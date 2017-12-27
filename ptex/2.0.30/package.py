@@ -1,13 +1,18 @@
-
 name = "ptex"
 
 version = "2.0.30"
 
-build_requires = [
-    'gcc-4.8.2+'
+authors = [
+    'Walt Disney Animation Studios'
 ]
 
-requires = [
+description = \
+    '''
+    Per-Face Texture Mapping for Production Rendering.
+    '''
+
+build_requires = [
+    'gcc-4.8.2+'
 ]
 
 variants = [
