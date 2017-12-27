@@ -28,9 +28,10 @@ uuid = "opensubdiv"
 
 def commands():
 
-    if building:
-        env.OPENSUBDIV_INCLUDE_DIR = '{root}/include'
-        env.OPENSUBDIV_ROOT_DIR = '{root}'
-        env.LD_LIBRARY_PATH.append('{root}/lib')
+    env.PATH.append('{root}/bin')
+    env.LD_LIBRARY_PATH.append('{root}/lib')
 
+    if building:
+        env.CPATH.append('{root}/include')
+        env.LIBRARY_PATH.append('{root}/lib')
 
