@@ -45,8 +45,9 @@ uuid = "openimageio"
 
 def commands():
     env.PATH.append("{root}/bin")
+    env.LD_LIBRARY_PATH.append("{root}/lib")
     env.PYTHONPATH.append("{root}/lib/python/site-packages")
 
     if building:
-        env.OIIO_INCLUDE_DIR = "{root}/include"
-        env.LD_LIBRARY_PATH.append("{root}/lib")
+        env.CPATH.append('{root}/include')
+        env.LIBRARY_PATH.append('{root}/lib')
