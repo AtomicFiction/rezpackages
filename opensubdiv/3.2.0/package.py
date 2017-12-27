@@ -4,11 +4,11 @@ name = "opensubdiv"
 version = "3.2.0"
 
 build_requires = [
-    'tbb-4',
     'glfw-3'
 ]
 
 requires = [
+    'tbb-4'
 ]
 
 variants = [
