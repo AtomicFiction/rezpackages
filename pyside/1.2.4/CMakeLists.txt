@@ -17,7 +17,7 @@ endif()
 ExternalProject_add(
     pyside
     GIT_REPOSITORY git@github.com:AtomicFiction/PySide.git
-    GIT_TAG 1.2.4
+    GIT_TAG ${pyside_version}
     PREFIX pyside
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
                -DBUILDSTATIC=ON
