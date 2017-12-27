@@ -27,11 +27,9 @@ uuid = "repository.qt"
 
 def commands():
     env.PATH.append('{root}/bin')
+    env.LD_LIBRARY_PATH.append('{root}/lib')
 
     if building:
-        env.QT_HOME = "{root}"
-        env.QT_VERSION = "4.8.6"
-        env.QT_INCLUDE_DIR = "{root}/include"
+        env.CPATH.append('{root}/include')
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
 
-        # static libs only, hence build-time only
-        env.LD_LIBRARY_PATH.append("{root}/lib")
