@@ -3,12 +3,13 @@ name = "openimageio"
 version = "1.7.11"
 
 authors = [
-    "Larry Gitz"
+    "Larry Gritz"
 ]
 
 description = \
     """
-    OpenImageIO Library.
+    OpenImageIO is a library for reading and writing images, and a bunch of
+    related classes, utilities, and applications.
     """
 
 build_requires = [
