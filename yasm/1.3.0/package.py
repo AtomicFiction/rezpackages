@@ -9,7 +9,7 @@ authors = [
 
 description = \
     '''
-    Yasm is a complete rewrite of the NASM assembler under the "new" BSD License.
+    Yasm is a complete rewrite of the NASM assembler under the 'new' BSD License.
     '''
 
 build_requires = [

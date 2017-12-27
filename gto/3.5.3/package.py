@@ -21,7 +21,7 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7", "python-2.7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7', 'python-2.7']
 ]
 
 tools = [

@@ -1,6 +1,6 @@
-name = "qt"
+name = 'qt'
 
-version = "4.8.6"
+version = '4.8.6'
 
 authors = [
     'The Qt Company <https://www.qt.io/>',
@@ -16,14 +16,14 @@ description = \
     '''
 
 build_requires = [
-    "gcc-4.8.2+"
+    'gcc-4.8.2+'
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", 'os-CentOS-7']
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "repository.qt"
+uuid = 'repository.qt'
 
 def commands():
     env.PATH.append('{root}/bin')

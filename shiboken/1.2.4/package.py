@@ -1,6 +1,6 @@
-name = "shiboken"
+name = 'shiboken'
 
-version = "1.2.4"
+version = '1.2.4'
 
 authors = [
     'John Cummings <jcummings2@users.sf.net>',
@@ -27,10 +27,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "repository.shiboken"
+uuid = 'repository.shiboken'
 
 def commands():
     env.PATH.append('{root}/bin')

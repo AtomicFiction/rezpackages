@@ -7,8 +7,8 @@ authors = [
 ]
 description = \
     '''
-    The Fraunhofer FDK AAC Codec Library for Android ("FDK AAC Codec") is
-    software that implements the MPEG Advanced Audio Coding ("AAC") encoding and
+    The Fraunhofer FDK AAC Codec Library for Android ('FDK AAC Codec') is
+    software that implements the MPEG Advanced Audio Coding ('AAC') encoding and
     decoding scheme for digital audio.  This FDK AAC Codec software is intended to
     be used on a wide variety of Android devices.
     '''

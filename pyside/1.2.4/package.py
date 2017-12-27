@@ -1,6 +1,6 @@
-name = "pyside"
+name = 'pyside'
 
-version = "1.2.4"
+version = '1.2.4'
 
 authors = [
     'Qt Project <www.qt.io>'
@@ -19,10 +19,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "repository.pyside"
+uuid = 'repository.pyside'
 
 def commands():
     env.PYTHONPATH.append('{root}/lib64/python2.7/site-packages')

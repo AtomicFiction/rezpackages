@@ -1,7 +1,7 @@
 
-name = "opensubdiv"
+name = 'opensubdiv'
 
-version = "3.2.0"
+version = '3.2.0'
 
 build_requires = [
     'glfw-3'
@@ -12,7 +12,7 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
 tools = [
@@ -24,7 +24,7 @@ tools = [
     'tutorials'
 ]
 
-uuid = "opensubdiv"
+uuid = 'opensubdiv'
 
 def commands():
 

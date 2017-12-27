@@ -1,22 +1,22 @@
-name = "maya"
+name = 'maya'
 
-version = "2016.5"
+version = '2016.5'
 
-description = "Maya"
+description = 'Maya'
 
 build_requires = []
 
 variants = [
-    ["platform-linux"]
+    ['platform-linux']
 ]
 
-uuid = "maya"
+uuid = 'maya'
 
 
 def commands():
-    env.MAYA_VERSION = "2016.5"
-    env.MAYA_LOCATION = "/usr/autodesk/maya/maya${MAYA_VERSION}"
-    env.PATH.prepend("${MAYA_LOCATION}")
+    env.MAYA_VERSION = '2016.5'
+    env.MAYA_LOCATION = '/usr/autodesk/maya/maya${MAYA_VERSION}'
+    env.PATH.prepend('${MAYA_LOCATION}')
 
     if building:
-        env.MAYA_INCLUDE = ("${MAYA_LOCATION}/include")
+        env.MAYA_INCLUDE = ('${MAYA_LOCATION}/include')

@@ -1,6 +1,6 @@
-name = "pyside_tools"
+name = 'pyside_tools'
 
-version = "0.2.15"
+version = '0.2.15'
 
 authors = [
     'PySide developers',
@@ -23,10 +23,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "repository.pyside-tools"
+uuid = 'repository.pyside-tools'
 
 def commands():
     env.PATH.prepend('{root}/bin')

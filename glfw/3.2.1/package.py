@@ -1,7 +1,7 @@
 
-name = "glfw"
+name = 'glfw'
 
-version = "3.2.1"
+version = '3.2.1'
 
 build_requires = [
     'gcc'
@@ -11,10 +11,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "glfw"
+uuid = 'glfw'
 
 def commands():
 

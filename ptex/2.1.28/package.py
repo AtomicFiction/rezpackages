@@ -1,6 +1,6 @@
-name = "ptex"
+name = 'ptex'
 
-version = "2.1.28"
+version = '2.1.28'
 
 authors = [
     'Walt Disney Animation Studios'
@@ -16,13 +16,13 @@ build_requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "ptex"
+uuid = 'ptex'
 
 def commands():
-    env.PATH.append("{root}/bin")
+    env.PATH.append('{root}/bin')
     env.LD_LIBRARY_PATH.append('{root}/lib64')
 
     if building:

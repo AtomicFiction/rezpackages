@@ -1,24 +1,24 @@
-name = "katana"
+name = 'katana'
 
-version = "2.5.4"
+version = '2.5.4'
 
-description = "Katana"
+description = 'Katana'
 
 build_requires = []
 
 variants = [
-    ["platform-linux"]
+    ['platform-linux']
 ]
 
-uuid = "katana"
+uuid = 'katana'
 
 
 def commands():
-    env.KATANA_VERSION = "2.5v4"
-    env.KATANA_LOCATION = "/opt/thefoundry/katana/katana${KATANA_VERSION}"
-    env.PATH.prepend("${KATANA_LOCATION}")
+    env.KATANA_VERSION = '2.5v4'
+    env.KATANA_LOCATION = '/opt/thefoundry/katana/katana${KATANA_VERSION}'
+    env.PATH.prepend('${KATANA_LOCATION}')
     env.KATANA_RESOURCES=''
 
     if building:
-        env.KATANA_INCLUDE = "${KATANA_LOCATION}/plugin_apis/include"
-        env.CPATH.append("${KATANA_LOCATION}/plugin_apis/include")
+        env.KATANA_INCLUDE = '${KATANA_LOCATION}/plugin_apis/include'
+        env.CPATH.append('${KATANA_LOCATION}/plugin_apis/include')
