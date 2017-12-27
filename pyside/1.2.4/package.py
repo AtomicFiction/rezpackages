@@ -1,12 +1,7 @@
-
 name = "pyside"
 
 version = "1.2.4"
 
-build_requires = [
-    'shiboken-1.2.4',
-    'qt-4.8',
-    'python-2.7'
 ]
 
 requires = [
