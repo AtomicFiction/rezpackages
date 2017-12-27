@@ -15,9 +15,12 @@ description = \
     application with native capabilities and speed. 
     '''
 
-build_requires = [
-    'gcc-4.8.2+',
+private_build_requires = [
     'cmake-3.1+'
+]
+
+build_requires = [
+    'gcc-4.8.2+'
 ]
 
 variants = [
