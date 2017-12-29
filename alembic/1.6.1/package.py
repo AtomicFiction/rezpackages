@@ -1,32 +1,37 @@
-name = "alembic"
+name = 'alembic'
 
-version = "1.6.1"
+version = '1.6.1'
 
 authors = [
-    ""
+    'Sony Pictures Imageworks, Inc.',
+    'Industrial Light and Magic'
 ]
 
 description = \
-    """
-    """
+    '''
+    Alembic is an open framework for storing and sharing scene data that includes a
+    C++ library, a file format, and client plugins and applications. 
+    '''
 
-requires = [
-    "pyilmbase-2",
-    "boost-1.55"
+private_build_requires = [
+    'boost-1.55',
+    'maya'
 ]
 
 build_requires = [
-    "gcc-4.8.2+",
-    "openexr-2.2",
-    "ilmbase-2.2",
-    "boost-1.55",
-    "pyilmbase-2",
-    "python-2.7",
-    "hdf5-1.8.12+"
+    'gcc-4.8.2+'
+]
+
+requires = [
+    'openexr-2.2',
+    'python-2.7',
+    'ilmbase-2.2',
+    'hdf5-1.8.12+',
+    'pyilmbase-2'
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
 tools = [
@@ -39,13 +44,14 @@ tools = [
     'abctree'
 ]
 
-uuid = "alembic"
+uuid = 'alembic'
 
 def commands():
-    env.PATH.append("{root}/bin")
+    env.PATH.append('{root}/bin')
     env.PYTHONPATH.append('{root}/lib/python2.7/site-packages')
+    env.LD_LIBRARY_PATH.append('{root}/lib')
 
     if building:
         env.CMAKE_MODULE_PATH.append('{root}/lib/cmake')
-        env.LD_LIBRARY_PATH.append("{root}/lib")
-        env.CPATH.append("{root}/include")
+        env.LIBRARY_PATH.append('{root}/lib')
+        env.CPATH.append('{root}/include')

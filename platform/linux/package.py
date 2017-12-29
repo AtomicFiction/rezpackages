@@ -1,14 +1,14 @@
-name = "platform"
+name = 'platform'
 
-version = "linux"
+version = 'linux'
 
 authors = [
-    "ajohns"
+    'ajohns'
 ]
 
 description = \
-    """
+    '''
     Package representing the platform.
-    """
+    '''
 
-uuid = "repository.platform"
+uuid = 'repository.platform'

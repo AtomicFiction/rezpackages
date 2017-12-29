@@ -4,7 +4,6 @@ include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-
 set(qt_version $ENV{REZ_BUILD_PROJECT_VERSION})
 
 rez_set_archive(
@@ -20,15 +19,13 @@ else()
     set(install_cmd "")
 endif()
 
-# -no-webkit 
-
 ExternalProject_add(
     qt
     URL ${url_qt}
     PREFIX qt
     UPDATE_COMMAND ""
-    CONFIGURE_COMMAND ./configure --prefix=${CMAKE_INSTALL_PREFIX} -confirm-license -opensource -no-openvg -system-sqlite -openssl-linked -dbus-linked -release -nomake demos -nomake example -optimized-qmake
-    INSTALL_COMMAND "${install_cmd}"
+    CONFIGURE_COMMAND ./configure -prefix ${CMAKE_INSTALL_PREFIX} -confirm-license -opensource -no-openvg -system-sqlite -openssl-linked -dbus-linked -release -nomake demos -nomake example -optimized-qmake
+    INSTALL_COMMAND ${install_cmd}
     BUILD_IN_SOURCE 1
     BUILD_COMMAND make ${make_args}
 )

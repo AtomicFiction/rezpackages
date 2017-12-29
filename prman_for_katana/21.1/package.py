@@ -1,8 +1,8 @@
-name = "prman_for_katana"
+name = 'prman_for_katana'
 
-version = "21.1"
+version = '21.1'
 
-description = "Pixar RenderMan For Katana"
+description = 'Pixar RenderMan For Katana'
 
 requires = [
     'prman-21',
@@ -12,10 +12,10 @@ requires = [
 build_requires = []
 
 variants = [
-    ["platform-linux"]
+    ['platform-linux']
 ]
 
-uuid = "prman_for_katana"
+uuid = 'prman_for_katana'
 
 
 def commands():

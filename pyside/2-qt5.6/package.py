@@ -1,6 +1,6 @@
 name = 'pyside'
 
-version = "2-qt5.6"
+version = '2-qt5.6'
 
 build_requires = [
     'qt-5.6',
@@ -14,10 +14,10 @@ requires = [
 ]
 
 variants = [
-    ["platform-linux", "arch-x86_64", "os-CentOS-7"]
+    ['platform-linux', 'arch-x86_64', 'os-CentOS-7']
 ]
 
-uuid = "repository.pyside"
+uuid = 'repository.pyside'
 
 def commands():
     env.PATH.append('{root}/bin')

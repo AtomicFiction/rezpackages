@@ -1,19 +1,19 @@
-name = "prman"
+name = 'prman'
 
-version = "21.0"
+version = '21.0'
 
-description = "Pixar RenderMan"
+description = 'Pixar RenderMan'
 
 build_requires = []
 
 variants = [
-    ["platform-linux"]
+    ['platform-linux']
 ]
 
-uuid = "prman"
+uuid = 'prman'
 
 def commands():
-    env.PRMAN_VERSION = "21.0"
-    env.PRMAN_LOCATION = "/opt/pixar/RenderManProServer-${PRMAN_VERSION}"
-    env.RMANTREE = "${PRMAN_LOCATION}"
-    env.PATH.prepend("${RMANTREE}/bin")
+    env.PRMAN_VERSION = '21.0'
+    env.PRMAN_LOCATION = '/opt/pixar/RenderManProServer-${PRMAN_VERSION}'
+    env.RMANTREE = '${PRMAN_LOCATION}'
+    env.PATH.prepend('${RMANTREE}/bin')

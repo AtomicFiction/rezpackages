@@ -4,7 +4,6 @@ include(RezBuild)
 include(RezRepository)
 include(ExternalProject)
 
-
 set(version $ENV{REZ_BUILD_PROJECT_VERSION})
 
 if(NOT ${REZ_BUILD_INSTALL})
@@ -16,9 +15,14 @@ rez_set_archive(
     https://github.com/pypa/pip/archive/${version}.tar.gz
 )
 
-set(src_path ${CMAKE_BINARY_DIR}/pip/src/pip)
+set(PYTHON_VERSION "$ENV{REZ_PYTHON_MAJOR_VERSION}.$ENV{REZ_PYTHON_MINOR_VERSION}")
+set(PIP_PYTHONPATH ${CMAKE_INSTALL_PREFIX}/lib/python${PYTHON_VERSION}/site-packages)
 
-set(install_cmd bash ${CMAKE_SOURCE_DIR}/install.sh ${src_path} ${CMAKE_INSTALL_PREFIX})
+if(${REZ_BUILD_INSTALL})
+    set(install_cmd export PYTHONPATH=$PYTHONPATH:${PIP_PYTHONPATH} && python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --skip-build)
+else()
+    set(install_cmd "")
+endif()
 
 ExternalProject_add(
     pip
@@ -27,6 +31,6 @@ ExternalProject_add(
     UPDATE_COMMAND ""
     CONFIGURE_COMMAND ""
     BUILD_IN_SOURCE 1
-    BUILD_COMMAND ""
-    INSTALL_COMMAND "${install_cmd}"
+    BUILD_COMMAND python setup.py build
+    INSTALL_COMMAND ${install_cmd}
 )
