@@ -11,7 +11,7 @@ description = \
     Utility libraries from ILM used by OpenEXR.
     """
 
-build_requires = [
+private_build_requires = [
     "gcc-4.8.2+"
 ]
 
@@ -22,9 +22,9 @@ variants = [
 uuid = "repository.ilmbase"
 
 def commands():
+    env.LD_LIBRARY_PATH.append("{root}/lib")
+
     if building:
         env.PKG_CONFIG_PATH.append("{root}/lib/pkgconfig")
         env.CPATH.append("{root}/include")
-
-        # static libs only, hence build-time only
-        env.LD_LIBRARY_PATH.append("{root}/lib")
+        env.LIBRARY_PATH.append("{root}/lib")

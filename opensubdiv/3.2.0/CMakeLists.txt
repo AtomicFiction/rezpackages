@@ -22,15 +22,15 @@ endif()
 ExternalProject_add(
     opensubdiv
     URL ${url_opensubdiv}
-    PREFIX opensubdiv        
+    PREFIX opensubdiv
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} 
                -DNO_PTEX=ON
                -DNO_DOC=ON
                -DNO_CUDA=ON
                -DNO_OPENCL=ON
                -DNO_CLEW=ON
-               -DCMAKE_SKIP_BUILD_RPATH=FALSE 
-               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE 
-               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib             
+               -DCMAKE_SKIP_BUILD_RPATH=FALSE
+               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE
+               -DCMAKE_INSTALL_RPATH=$ENV{REZ_TBB_ROOT}/lib/release:${CMAKE_INSTALL_PREFIX}/lib
 )
 

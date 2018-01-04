@@ -12,7 +12,7 @@ rez_set_archive(
 )
 
 if(${REZ_BUILD_INSTALL})
-    set(install_cmd python ./setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --standard-lib --optimize=1 --install-data=${CMAKE_INSTALL_PREFIX}/share)
+    set(install_cmd python ./setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --skip-build --standard-lib --optimize=1)
 else()
     set(install_cmd "")
 endif()
@@ -21,9 +21,8 @@ ExternalProject_add(
     scons
     URL ${url_scons}
     PREFIX scons
-    UPDATE_COMMAND ""
     CONFIGURE_COMMAND ""
-    INSTALL_COMMAND ${install_cmd}
     BUILD_IN_SOURCE 1
-    BUILD_COMMAND ""
+    BUILD_COMMAND python setup.py build
+    INSTALL_COMMAND ${install_cmd}
 )

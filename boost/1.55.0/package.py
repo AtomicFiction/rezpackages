@@ -23,7 +23,8 @@ variants = [
 uuid = "repository.boost"
 
 def commands():
-    env.LD_LIBRARY_PATH.append("{root}/lib")
+    env.LD_LIBRARY_PATH.prepend("{root}/lib")
 
     if building:
         env.CPATH.append("{root}/include")
+        env.LIBRARY_PATH.append("{root}/lib")

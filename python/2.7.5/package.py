@@ -10,3 +10,10 @@ variants = [
 
 def commands():
     env.PATH.append('/usr/bin')
+    env.PYTHONPATH.append('/usr/lib64/python2.7/site-packages')
+    env.LD_LIBRARY_PATH.append('/usr/lib64')
+
+    if building:
+        env.CPATH.append('/usr/include/python2.7')
+        env.PKG_CONFIG_PATH.append('/usr/lib64/pkgconfig')
+
