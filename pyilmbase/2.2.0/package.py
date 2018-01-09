@@ -26,7 +26,6 @@ uuid = "repository.pyilmbase"
 
 def commands():
     env.PYTHONPATH.append("{root}/lib64/python2.7/site-packages")
-    env.LD_LIBRARY_PATH.append('{root}/lib')
 
     if building:
         env.CPATH.append('{root}/include')
