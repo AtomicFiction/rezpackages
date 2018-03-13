@@ -41,7 +41,6 @@ uuid = 'repository.imagemagick'
 def commands():
     env.MAGICK_CONFIGURE_PATH.prepend('{root}/etc/ImageMagick-7')
     env.PATH.append('{root}/bin')
-    #env.LD_LIBRARY_PATH.append('{root}/lib')
     env.MANPATH.append('{root}/share/man')
 
     if building:
