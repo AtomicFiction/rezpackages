@@ -29,3 +29,4 @@ ExternalProject_add(
     INSTALL_COMMAND "${install_cmd}"
 )
 
+install(CODE "message(STATUS Running Install)")

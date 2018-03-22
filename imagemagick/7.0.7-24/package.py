@@ -36,7 +36,7 @@ tools = [
     'stream'
 ]
 
-uuid = 'repository.imagemagick'
+uuid = 'imagemagick'
 
 def commands():
     env.MAGICK_CONFIGURE_PATH.prepend('{root}/etc/ImageMagick-7')
