@@ -27,11 +27,11 @@ tools = [
     'ctest'
 ]
 
-uuid = 'repository.openexr'
+uuid = 'cmake'
 
 def commands():
     env.PATH.prepend('{root}/bin')
-    env.CMAKE_MODULE_PATH.append('{root}/share/Modules')
+    env.CMAKE_MODULE_PATH.append('{root}/share/cmake-3.10/Modules')
 
     if building:
         env.CPATH.append('{root}/share/cmake-3.10/include')

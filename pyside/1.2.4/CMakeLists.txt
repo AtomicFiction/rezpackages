@@ -17,21 +17,8 @@ endif()
 ExternalProject_add(
     pyside
     GIT_REPOSITORY git@github.com:AtomicFiction/PySide.git
-    GIT_TAG 1.2.4
+    GIT_TAG ${pyside_version}
     PREFIX pyside
-    CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-               -DBUILDSTATIC=ON
-               -DLINKSTATIC=ON
-               -DCMAKE_SKIP_BUILD_RPATH=FALSE
-               -DCMAKE_BUILD_WITH_INSTALL_RPATH=FALSE
-               -DCMAKE_INSTALL_RPATH=$ENV{REZ_QT_ROOT}/lib:$ENV{REZ_SHIBOKEN_ROOT}/lib:${CMAKE_INSTALL_PREFIX}/lib
-)
-
-ExternalProject_add(
-    pyside-tools
-    GIT_REPOSITORY git@github.com:AtomicFiction/Tools.git
-    GIT_TAG 0.2.15
-    PREFIX pyside-tools
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
                -DBUILDSTATIC=ON
                -DLINKSTATIC=ON

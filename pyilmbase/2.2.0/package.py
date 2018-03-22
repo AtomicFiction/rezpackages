@@ -8,7 +8,7 @@ authors = [
 
 description = \
     """
-    Utility libraries from ILM used by OpenEXR.
+    Python bindings for the utility libraries from ILM used by OpenEXR.
     """
 
 build_requires = [
@@ -26,8 +26,10 @@ uuid = "repository.pyilmbase"
 
 def commands():
     env.PYTHONPATH.append("{root}/lib64/python2.7/site-packages")
-    env.LD_LIBRARY_PATH.append('{root}/lib')
+
     if building:
         env.CPATH.append('{root}/include')
+        env.LIBRARY_PATH.append('{root}/lib')
         env.M4PATH.append('{root}/share/aclocal')
+        env.PKG_CONFIG_PATH.append('{root}/lib/pkgconfig')
 

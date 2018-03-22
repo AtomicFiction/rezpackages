@@ -22,10 +22,10 @@ endif()
 ExternalProject_add(
     ptex
     URL ${url_ptex}
-    PREFIX ptex    
+    PREFIX ptex
     UPDATE_COMMAND ""
     CONFIGURE_COMMAND ""
-    INSTALL_COMMAND "${install_cmd}"
+    INSTALL_COMMAND ${install_cmd}
     BUILD_IN_SOURCE 1
     BUILD_COMMAND make prefix=${CMAKE_INSTALL_PREFIX}
 )
