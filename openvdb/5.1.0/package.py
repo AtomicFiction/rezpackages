@@ -16,18 +16,12 @@ private_build_requires = [
 ]
 
 requires = [
-    "boost-1.55.0",
-    "ilmbase-2.2",
-    "python-2.7+",
+    "openexr-2.2.0",
     "tbb"
 ]
 
 variants = [
     ["platform-linux", "arch-x86_64", "os-CentOS-7"]
-]
-
-tools = [
-    "vdb_print"
 ]
 
 uuid = "repository.openvdb"

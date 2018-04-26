@@ -12,10 +12,19 @@ rez_set_archive(
     http://www.openvdb.org/download/openvdb_5_1_0_library.zip
 )
 
-set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT} VERBOSE=1 LOG4CPLUS_LIB= )
+set(make_args -j$ENV{REZ_BUILD_THREAD_COUNT}
+	VERBOSE=1
+	LOG4CPLUS_LIB=
+	CPPUNIT_INCL_DIR=
+	CONCURRENT_MALLOC_LIB=
+	EXR_INCL_DIR=$ENV{REZ_OPENEXR_ROOT}/include
+	EXR_LIB_DIR=$ENV{REZ_OPENEXR_ROOT}/lib
+	shared=no
+	)
 
 if(${REZ_BUILD_INSTALL})
-    set(install_cmd make install ${make_args})
+	MESSAGE(${CMAKE_INSTALL_PREFIX})
+    set(install_cmd make install_lib ${make_args} DESTDIR=${CMAKE_INSTALL_PREFIX})
 else()
     set(install_cmd "")
 endif()
@@ -28,7 +37,7 @@ ExternalProject_add(
     CONFIGURE_COMMAND ""
     INSTALL_COMMAND "${install_cmd}"
     BUILD_IN_SOURCE 1
-    BUILD_COMMAND make ${make_args}
+    BUILD_COMMAND make lib ${make_args}
 )
 
 
